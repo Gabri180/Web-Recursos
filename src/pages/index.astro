@@ -1,0 +1,321 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+<Layout title="Inicio">
+
+  <!-- ===================== HEADER ===================== -->
+  <header id="inicio" style="background:#000;color:#fff;padding:5rem 2rem 4rem;text-align:center;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1611348586804-61bf6c080437?w=1600&q=80') center/cover;opacity:.18;"></div>
+    <div style="position:relative;z-index:1;max-width:800px;margin:0 auto;">
+      <p style="font-size:.85rem;letter-spacing:3px;text-transform:uppercase;color:#aaa;margin-bottom:.5rem;">Proyecto Web · Martí</p>
+      <h1 style="font-size:clamp(3rem,8vw,6rem);font-weight:900;letter-spacing:-3px;line-height:1;margin-bottom:1rem;">UBER</h1>
+      <p style="font-size:1.25rem;color:#ccc;max-width:500px;margin:0 auto 2rem;">La plataforma de transporte que cambió el mundo</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="#info" class="btn btn-black" style="background:#fff;color:#000;">Conoce más</a>
+        <a href={`${base}blog`} class="btn btn-outline" style="border-color:#fff;color:#fff;">Ver Blog</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============== SEPARADOR DECORATIVO ============== -->
+  <hr class="separator" style="max-width:1200px;margin:0 auto;" />
+  <p class="separator-wave">&#9679;&nbsp;&#9679;&nbsp;&#9679;</p>
+
+  <main>
+    <div class="container">
+
+      <!-- ================= INFO ================= -->
+      <section id="info" class="section">
+        <h2 class="section-title">¿Qué es Uber?</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
+          <div>
+            <p style="font-size:1.1rem;color:#444;margin-bottom:1rem;">
+              <strong>Uber</strong> es una plataforma tecnológica de transporte fundada en 2009 en San Francisco, California.
+              A través de su aplicación móvil, conecta a conductores independientes con pasajeros que necesitan un viaje
+              de manera rápida, segura y a un precio competitivo.
+            </p>
+            <p style="color:#555;margin-bottom:1.5rem;">
+              Con presencia en más de <strong>70 países</strong> y <strong>10.000 ciudades</strong>, Uber ha revolucionado
+              la industria del transporte urbano, ofreciendo además servicios de entrega de comida (Uber Eats),
+              envíos de paquetes y transporte de carga.
+            </p>
+            <a href={`${base}caracteristicas`} class="btn btn-black">Ver características</a>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=700&q=80"
+              alt="Uber app en uso"
+              style="width:100%;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.15);"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== ÚLTIMAS NOTICIAS ============== -->
+      <section id="noticias" class="section" style="background:var(--uber-gray);border-radius:16px;padding:3rem 2rem;">
+        <h2 class="section-title center">Últimas Noticias</h2>
+        <p style="text-align:center;color:var(--uber-mid-gray);margin-bottom:2.5rem;">Las 3 entradas más recientes del blog</p>
+        <div class="grid-3">
+          <!-- Noticia 1 -->
+          <a href={`${base}blog/uber-lanza-uber-one`} style="text-decoration:none;color:inherit;">
+            <article class="card">
+              <img src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=600&q=80" alt="Uber One" />
+              <div class="card-body">
+                <span class="card-tag">Novedades</span>
+                <h3 class="card-title">Uber lanza Uber One en España</h3>
+                <p class="card-excerpt">El nuevo programa de suscripción ofrece descuentos exclusivos y viajes prioritarios.</p>
+                <p class="card-date">10 marzo 2026</p>
+              </div>
+            </article>
+          </a>
+          <!-- Noticia 2 -->
+          <a href={`${base}blog/uber-coches-electricos`} style="text-decoration:none;color:inherit;">
+            <article class="card">
+              <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&q=80" alt="Vehículos eléctricos" />
+              <div class="card-body">
+                <span class="card-tag">Tecnología</span>
+                <h3 class="card-title">Uber apuesta por vehículos 100% eléctricos</h3>
+                <p class="card-excerpt">La compañía se compromete a ser totalmente eléctrica en Europa para 2030.</p>
+                <p class="card-date">5 marzo 2026</p>
+              </div>
+            </article>
+          </a>
+          <!-- Noticia 3 -->
+          <a href={`${base}blog/uber-ia-seguridad`} style="text-decoration:none;color:inherit;">
+            <article class="card">
+              <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&q=80" alt="IA en Uber" />
+              <div class="card-body">
+                <span class="card-tag">Tecnología</span>
+                <h3 class="card-title">IA para mejorar la seguridad en trayectos</h3>
+                <p class="card-excerpt">Nuevos algoritmos detectan comportamientos anómalos en tiempo real.</p>
+                <p class="card-date">1 marzo 2026</p>
+              </div>
+            </article>
+          </a>
+        </div>
+        <div style="text-align:center;margin-top:2.5rem;">
+          <a href={`${base}blog`} class="btn btn-outline">Ver todos los artículos</a>
+        </div>
+      </section>
+
+      <hr class="separator" />
+
+      <!-- =============== GALERÍA =============== -->
+      <section id="galeria" class="section">
+        <h2 class="section-title">Galería</h2>
+        <p style="color:var(--uber-mid-gray);margin-bottom:2rem;">Imágenes de la experiencia Uber</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+          <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=500&q=80" alt="Taxi Uber" style="width:100%;height:220px;object-fit:cover;border-radius:10px;" />
+          <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=500&q=80" alt="Conducir con Uber" style="width:100%;height:220px;object-fit:cover;border-radius:10px;" />
+          <img src="https://images.unsplash.com/photo-1592039863426-6b8e0e85b87f?w=500&q=80" alt="App Uber" style="width:100%;height:220px;object-fit:cover;border-radius:10px;" />
+          <img src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?w=500&q=80" alt="Ciudad nocturna" style="width:100%;height:220px;object-fit:cover;border-radius:10px;" />
+          <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=500&q=80" alt="Uber Eats" style="width:100%;height:220px;object-fit:cover;border-radius:10px;" />
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80" alt="Coche moderno" style="width:100%;height:220px;object-fit:cover;border-radius:10px;" />
+        </div>
+      </section>
+
+      <!-- ================ VIDEO ================ -->
+      <section id="video" class="section">
+        <h2 class="section-title center">Uber en Acción</h2>
+        <p style="text-align:center;color:var(--uber-mid-gray);margin-bottom:2rem;">Descubre cómo funciona la plataforma</p>
+        <div style="max-width:800px;margin:0 auto;border-radius:14px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.2);">
+          <div style="position:relative;padding-bottom:56.25%;height:0;">
+            <iframe
+              src="https://www.youtube.com/embed/oNZoSs5VFNE"
+              title="¿Cómo funciona Uber?"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= BOTÓN / ENLACE ============= -->
+      <section id="enlace" class="section" style="text-align:center;">
+        <h2 class="section-title center">¿Listo para pedir tu primer viaje?</h2>
+        <p style="color:var(--uber-mid-gray);margin:1rem auto 2rem;max-width:500px;">
+          Descarga la app o accede desde la web y pide tu primer viaje ahora mismo.
+        </p>
+        <a href="https://www.uber.com/es-ES/sign-up/" target="_blank" rel="noopener" class="btn btn-black" style="font-size:1.1rem;padding:1rem 3rem;">
+          Registrarse en Uber
+        </a>
+      </section>
+
+      <hr class="separator" />
+
+      <!-- =========== DOCUMENTO / PDF =========== -->
+      <section id="documento" class="section">
+        <h2 class="section-title">Documento Informativo</h2>
+        <p style="color:#555;margin-bottom:1.5rem;">Descarga el informe completo sobre Uber: historia, cifras clave y análisis de negocio.</p>
+        <div style="display:flex;align-items:center;gap:1.5rem;background:#f6f6f6;border-radius:12px;padding:1.5rem;max-width:500px;">
+          <div style="font-size:3rem;">📄</div>
+          <div>
+            <h3 style="font-weight:700;margin-bottom:.3rem;">Informe Uber 2025</h3>
+            <p style="font-size:.85rem;color:#777;margin-bottom:.75rem;">PDF · Análisis completo de la plataforma</p>
+            <a
+              href="https://investor.uber.com/news-events/news/press-release-details/2025/Uber-Announces-Results-for-Fourth-Quarter-and-Full-Year-2024/default.aspx"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-black"
+              style="font-size:.85rem;padding:.5rem 1.2rem;"
+            >
+              Ver informe
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========== DIAPOSITIVAS / SLIDER =========== -->
+      <section id="slider" class="section" style="background:#000;border-radius:16px;padding:3rem 2rem;color:#fff;">
+        <h2 class="section-title center" style="color:#fff;">Servicios de Uber</h2>
+        <h2 class="section-title center" style="color:#fff;font-size:0;" aria-hidden="true"></h2>
+        <div id="slider-container" style="position:relative;overflow:hidden;border-radius:12px;margin-top:2rem;">
+          <div id="slides" style="display:flex;transition:transform .5s ease;">
+            <!-- Slide 1 -->
+            <div class="slide" style="min-width:100%;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;padding:0 1rem;">
+              <div>
+                <span style="font-size:.8rem;letter-spacing:3px;text-transform:uppercase;color:#aaa;">01 / Transporte</span>
+                <h3 style="font-size:2.2rem;font-weight:800;margin:.5rem 0 1rem;">UberX</h3>
+                <p style="color:#ccc;font-size:1rem;">Viajes económicos y rápidos. El servicio más popular de Uber para desplazarte por la ciudad al mejor precio.</p>
+              </div>
+              <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=600&q=80" alt="UberX" style="width:100%;border-radius:10px;height:280px;object-fit:cover;" />
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide" style="min-width:100%;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;padding:0 1rem;">
+              <div>
+                <span style="font-size:.8rem;letter-spacing:3px;text-transform:uppercase;color:#aaa;">02 / Comida</span>
+                <h3 style="font-size:2.2rem;font-weight:800;margin:.5rem 0 1rem;">Uber Eats</h3>
+                <p style="color:#ccc;font-size:1rem;">Pide comida de tus restaurantes favoritos y recíbela en la puerta de tu casa en minutos.</p>
+              </div>
+              <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=600&q=80" alt="Uber Eats" style="width:100%;border-radius:10px;height:280px;object-fit:cover;" />
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide" style="min-width:100%;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;padding:0 1rem;">
+              <div>
+                <span style="font-size:.8rem;letter-spacing:3px;text-transform:uppercase;color:#aaa;">03 / Lujo</span>
+                <h3 style="font-size:2.2rem;font-weight:800;margin:.5rem 0 1rem;">Uber Black</h3>
+                <p style="color:#ccc;font-size:1rem;">Experiencia premium con conductores profesionales y vehículos de alta gama para tus desplazamientos más especiales.</p>
+              </div>
+              <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&q=80" alt="Uber Black" style="width:100%;border-radius:10px;height:280px;object-fit:cover;" />
+            </div>
+          </div>
+          <!-- Controls -->
+          <button onclick="prevSlide()" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);color:#fff;border:none;width:44px;height:44px;border-radius:50%;font-size:1.2rem;cursor:pointer;backdrop-filter:blur(4px);">&#8249;</button>
+          <button onclick="nextSlide()" style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);color:#fff;border:none;width:44px;height:44px;border-radius:50%;font-size:1.2rem;cursor:pointer;backdrop-filter:blur(4px);">&#8250;</button>
+          <!-- Dots -->
+          <div style="position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);display:flex;gap:.5rem;" id="dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+          </div>
+        </div>
+      </section>
+
+      <hr class="separator" />
+
+      <!-- =========== FORMULARIO CONTACTO =========== -->
+      <section id="contacto" class="section">
+        <h2 class="section-title">Contacto</h2>
+        <p style="color:#555;margin-bottom:2rem;">¿Tienes alguna pregunta? Escríbenos y te respondemos.</p>
+        <form id="contact-form" style="max-width:600px;display:flex;flex-direction:column;gap:1.25rem;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+            <div>
+              <label for="nombre" style="display:block;font-weight:600;margin-bottom:.4rem;font-size:.9rem;">Nombre</label>
+              <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre"
+                style="width:100%;padding:.75rem 1rem;border:2px solid #e5e5e5;border-radius:8px;font-size:.95rem;outline:none;transition:border .2s;"
+                onfocus="this.style.borderColor='#000'" onblur="this.style.borderColor='#e5e5e5'" />
+            </div>
+            <div>
+              <label for="email" style="display:block;font-weight:600;margin-bottom:.4rem;font-size:.9rem;">Email</label>
+              <input type="email" id="email" name="email" required placeholder="tu@email.com"
+                style="width:100%;padding:.75rem 1rem;border:2px solid #e5e5e5;border-radius:8px;font-size:.95rem;outline:none;transition:border .2s;"
+                onfocus="this.style.borderColor='#000'" onblur="this.style.borderColor='#e5e5e5'" />
+            </div>
+          </div>
+          <div>
+            <label for="asunto" style="display:block;font-weight:600;margin-bottom:.4rem;font-size:.9rem;">Asunto</label>
+            <input type="text" id="asunto" name="asunto" required placeholder="¿En qué podemos ayudarte?"
+              style="width:100%;padding:.75rem 1rem;border:2px solid #e5e5e5;border-radius:8px;font-size:.95rem;outline:none;transition:border .2s;"
+              onfocus="this.style.borderColor='#000'" onblur="this.style.borderColor='#e5e5e5'" />
+          </div>
+          <div>
+            <label for="mensaje" style="display:block;font-weight:600;margin-bottom:.4rem;font-size:.9rem;">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" required rows="5" placeholder="Escribe tu mensaje aquí..."
+              style="width:100%;padding:.75rem 1rem;border:2px solid #e5e5e5;border-radius:8px;font-size:.95rem;resize:vertical;outline:none;transition:border .2s;font-family:inherit;"
+              onfocus="this.style.borderColor='#000'" onblur="this.style.borderColor='#e5e5e5'"></textarea>
+          </div>
+          <button type="submit" class="btn btn-black" style="align-self:flex-start;font-size:1rem;">Enviar mensaje</button>
+          <p id="form-msg" style="display:none;color:green;font-weight:600;">&#10003; ¡Mensaje enviado correctamente!</p>
+        </form>
+      </section>
+
+      <!-- ================ MAPA ================ -->
+      <section id="mapa" class="section">
+        <h2 class="section-title">Ubicación de Uber</h2>
+        <p style="color:#555;margin-bottom:1.5rem;">Sede central de Uber Technologies en San Francisco, California.</p>
+        <div style="border-radius:14px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.12);height:420px;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.8418!2d-122.3971!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580627d2f9427%3A0xad7d14a4f5f3ace5!2sUber%20Technologies%2C%20Inc.!5e0!3m2!1ses!2ses!4v1710000000000"
+            width="100%"
+            height="420"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Sede Uber San Francisco"
+          ></iframe>
+        </div>
+      </section>
+
+    </div><!-- /container -->
+  </main>
+
+</Layout>
+
+<style>
+  .dot {
+    width: 10px; height: 10px;
+    background: rgba(255,255,255,.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  .dot.active { background: #fff; }
+
+  @media (max-width: 768px) {
+    .slide { grid-template-columns: 1fr !important; }
+    .slide img { display: none; }
+  }
+</style>
+
+<script>
+  let current = 0;
+  const total = 3;
+
+  function updateSlider() {
+    const slides = document.getElementById('slides') as HTMLElement;
+    slides.style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('.dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  (window as any).nextSlide = () => { current = (current + 1) % total; updateSlider(); };
+  (window as any).prevSlide = () => { current = (current - 1 + total) % total; updateSlider(); };
+  (window as any).goToSlide = (n: number) => { current = n; updateSlider(); };
+
+  // Auto-play
+  setInterval(() => (window as any).nextSlide(), 5000);
+
+  // Contact form
+  document.getElementById('contact-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const msg = document.getElementById('form-msg') as HTMLElement;
+    msg.style.display = 'block';
+    (e.target as HTMLFormElement).reset();
+    setTimeout(() => { msg.style.display = 'none'; }, 4000);
+  });
+</script>

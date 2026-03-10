@@ -1,0 +1,89 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+<Layout title="IA para mejorar la seguridad en Uber" description="Cómo la inteligencia artificial mejora la seguridad de los viajes de Uber">
+
+  <article>
+    <div style="background:#000;color:#fff;padding:4rem 2rem;">
+      <div class="container" style="max-width:800px;">
+        <a href={`${base}blog`} style="color:#aaa;text-decoration:none;font-size:.85rem;">← Volver al blog</a>
+        <span class="card-tag" style="margin-top:1rem;display:inline-block;">Tecnología</span>
+        <h1 style="font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.1;margin-top:.75rem;letter-spacing:-1px;">
+          IA para mejorar la seguridad en los trayectos de Uber
+        </h1>
+        <p style="color:#aaa;margin-top:1rem;">1 de marzo de 2026 &middot; 5 min de lectura</p>
+      </div>
+    </div>
+
+    <div style="max-width:800px;margin:0 auto;padding:3rem 2rem;">
+      <img
+        src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200&q=80"
+        alt="IA seguridad Uber"
+        style="width:100%;border-radius:14px;margin-bottom:2.5rem;box-shadow:0 4px 20px rgba(0,0,0,.1);"
+      />
+
+      <p style="font-size:1.15rem;color:#333;line-height:1.9;margin-bottom:1.5rem;">
+        Uber ha presentado su nueva suite de seguridad basada en <strong>inteligencia artificial</strong>
+        que analiza en tiempo real el comportamiento durante los viajes para detectar situaciones
+        potencialmente peligrosas y actuar antes de que escalen.
+      </p>
+
+      <h2 style="font-size:1.5rem;font-weight:800;margin:2rem 0 1rem;">¿Cómo funciona?</h2>
+      <p style="color:#444;line-height:1.8;margin-bottom:1rem;">
+        El sistema utiliza los sensores del smartphone del conductor (acelerómetro, giroscopio, GPS)
+        para crear un perfil de conducción. El algoritmo detecta patrones anómalos como:
+      </p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:.75rem;color:#444;margin-bottom:1.5rem;">
+        <li style="display:flex;gap:.75rem;"><span style="color:#000;font-size:1rem;">▸</span> <div>Frenadas bruscas o aceleraciones inusuales que podrían indicar un accidente</div></li>
+        <li style="display:flex;gap:.75rem;"><span style="color:#000;font-size:1rem;">▸</span> <div>Desvíos significativos de la ruta prevista</div></li>
+        <li style="display:flex;gap:.75rem;"><span style="color:#000;font-size:1rem;">▸</span> <div>Paradas prolongadas en zonas alejadas del destino</div></li>
+        <li style="display:flex;gap:.75rem;"><span style="color:#000;font-size:1rem;">▸</span> <div>Patrones de conducción compatibles con somnolencia</div></li>
+      </ul>
+
+      <h2 style="font-size:1.5rem;font-weight:800;margin:2rem 0 1rem;">Respuesta automática</h2>
+      <p style="color:#444;line-height:1.8;margin-bottom:1rem;">
+        Cuando el sistema detecta una anomalía, actúa de forma escalonada:
+      </p>
+      <ol style="list-style:none;display:flex;flex-direction:column;gap:1rem;color:#444;margin-bottom:1.5rem;">
+        <li style="display:flex;gap:1rem;">
+          <span style="background:#fef08a;color:#000;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;flex-shrink:0;">1</span>
+          <div><strong>Alerta en la app</strong> — Notifica tanto al pasajero como al conductor del comportamiento detectado.</div>
+        </li>
+        <li style="display:flex;gap:1rem;">
+          <span style="background:#fb923c;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;flex-shrink:0;">2</span>
+          <div><strong>Verificación</strong> — Pregunta activamente si el pasajero se encuentra bien con un botón "Estoy bien / Necesito ayuda".</div>
+        </li>
+        <li style="display:flex;gap:1rem;">
+          <span style="background:#ef4444;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;flex-shrink:0;">3</span>
+          <div><strong>Contacto de emergencia</strong> — Si no hay respuesta, notifica al contacto de confianza con la ubicación en tiempo real.</div>
+        </li>
+        <li style="display:flex;gap:1rem;">
+          <span style="background:#991b1b;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;flex-shrink:0;">4</span>
+          <div><strong>Emergencias</strong> — En casos críticos, conecta directamente con el 112 compartiendo la ubicación GPS.</div>
+        </li>
+      </ol>
+
+      <h2 style="font-size:1.5rem;font-weight:800;margin:2rem 0 1rem;">Resultados preliminares</h2>
+      <p style="color:#444;line-height:1.8;margin-bottom:1rem;">
+        En las ciudades piloto donde se ha probado el sistema durante 2025, Uber reporta una
+        reducción del <strong>23% en incidentes de seguridad graves</strong> y un tiempo de respuesta
+        de emergencia 4 veces más rápido que el promedio anterior.
+      </p>
+
+      <div style="background:#f6f6f6;border-radius:12px;padding:1.5rem 2rem;margin-top:2rem;">
+        <p style="font-weight:700;margin-bottom:.5rem;">Privacidad</p>
+        <p style="color:#555;font-size:.9rem;">
+          Uber asegura que todos los datos de sensores son procesados localmente en el dispositivo
+          y no se almacenan en sus servidores. Solo se transmite información cuando se detecta
+          una posible emergencia.
+        </p>
+      </div>
+
+      <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid #eee;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+        <a href={`${base}blog/uber-coches-electricos`} style="color:#000;text-decoration:none;font-weight:600;">← Artículo anterior</a>
+        <a href={`${base}blog`} style="color:#000;text-decoration:none;font-weight:600;">Ver todos →</a>
+      </div>
+    </div>
+  </article>
+</Layout>

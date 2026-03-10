@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Tipos de Usuarios" description="Tipos de usuarios de Uber">
+
+  <div style="background:#000;color:#fff;padding:4rem 2rem;text-align:center;">
+    <div class="container">
+      <h1 style="font-size:3rem;font-weight:900;letter-spacing:-2px;">Tipo de Usuarios</h1>
+      <p style="color:#aaa;font-size:1.1rem;margin-top:.75rem;">¿Quién usa Uber y cómo?</p>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+
+      <section class="section">
+        <div class="grid-3">
+
+          <!-- PASAJERO CASUAL -->
+          <div style="border:1px solid #e5e5e5;border-radius:16px;overflow:hidden;">
+            <div style="background:#000;padding:2rem;text-align:center;">
+              <span style="font-size:3rem;">🧑‍💼</span>
+              <h3 style="color:#fff;font-weight:800;font-size:1.3rem;margin-top:.75rem;">Pasajero Casual</h3>
+            </div>
+            <div style="padding:1.5rem;">
+              <p style="color:#555;font-size:.9rem;margin-bottom:1rem;">Usuario que pide viajes de vez en cuando para moverse por la ciudad.</p>
+              <ul style="list-style:none;font-size:.9rem;display:flex;flex-direction:column;gap:.5rem;color:#444;">
+                <li>🎯 Usa UberX principalmente</li>
+                <li>📍 Trayectos urbanos cortos</li>
+                <li>💰 Precio como prioridad</li>
+                <li>📱 Pago con tarjeta</li>
+                <li>⭐ Valoración media: 4.6</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- VIAJERO DE NEGOCIOS -->
+          <div style="border:2px solid #000;border-radius:16px;overflow:hidden;">
+            <div style="background:#000;padding:2rem;text-align:center;position:relative;">
+              <span style="position:absolute;top:.75rem;right:.75rem;background:#fff;color:#000;font-size:.7rem;font-weight:700;padding:.2rem .5rem;border-radius:4px;">POPULAR</span>
+              <span style="font-size:3rem;">💼</span>
+              <h3 style="color:#fff;font-weight:800;font-size:1.3rem;margin-top:.75rem;">Viajero de Negocios</h3>
+            </div>
+            <div style="padding:1.5rem;">
+              <p style="color:#555;font-size:.9rem;margin-bottom:1rem;">Profesional que usa Uber para desplazamientos laborales con factura.</p>
+              <ul style="list-style:none;font-size:.9rem;display:flex;flex-direction:column;gap:.5rem;color:#444;">
+                <li>🏆 Usa Uber Black o Comfort</li>
+                <li>✈️ Aeropuertos y reuniones</li>
+                <li>🧾 Factura para empresa (Uber for Business)</li>
+                <li>📅 Programa viajes con antelación</li>
+                <li>⭐ Valoración media: 4.9</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- CONDUCTOR SOCIO -->
+          <div style="border:1px solid #e5e5e5;border-radius:16px;overflow:hidden;">
+            <div style="background:#000;padding:2rem;text-align:center;">
+              <span style="font-size:3rem;">🚗</span>
+              <h3 style="color:#fff;font-weight:800;font-size:1.3rem;margin-top:.75rem;">Conductor Socio</h3>
+            </div>
+            <div style="padding:1.5rem;">
+              <p style="color:#555;font-size:.9rem;margin-bottom:1rem;">Persona que usa Uber como fuente de ingresos principal o complementaria.</p>
+              <ul style="list-style:none;font-size:.9rem;display:flex;flex-direction:column;gap:.5rem;color:#444;">
+                <li>💰 Ingresos flexibles</li>
+                <li>🕐 Horario propio</li>
+                <li>📊 Estadísticas en tiempo real</li>
+                <li>🎁 Bonificaciones por rendimiento</li>
+                <li>⭐ Valoración mínima: 4.2</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ESTUDIANTE -->
+          <div style="border:1px solid #e5e5e5;border-radius:16px;overflow:hidden;">
+            <div style="background:#333;padding:2rem;text-align:center;">
+              <span style="font-size:3rem;">🎓</span>
+              <h3 style="color:#fff;font-weight:800;font-size:1.3rem;margin-top:.75rem;">Estudiante</h3>
+            </div>
+            <div style="padding:1.5rem;">
+              <p style="color:#555;font-size:.9rem;margin-bottom:1rem;">Joven universitario que usa Uber como alternativa al transporte público.</p>
+              <ul style="list-style:none;font-size:.9rem;display:flex;flex-direction:column;gap:.5rem;color:#444;">
+                <li>🌙 Uso nocturno frecuente</li>
+                <li>👥 Comparte viajes (UberPool)</li>
+                <li>💸 Presupuesto ajustado</li>
+                <li>📲 Alta frecuencia de uso de la app</li>
+                <li>⭐ Valoración media: 4.5</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- EMPRESA (Uber for Business) -->
+          <div style="border:1px solid #e5e5e5;border-radius:16px;overflow:hidden;">
+            <div style="background:#333;padding:2rem;text-align:center;">
+              <span style="font-size:3rem;">🏢</span>
+              <h3 style="color:#fff;font-weight:800;font-size:1.3rem;margin-top:.75rem;">Empresa (Uber for Business)</h3>
+            </div>
+            <div style="padding:1.5rem;">
+              <p style="color:#555;font-size:.9rem;margin-bottom:1rem;">Compañías que gestionan desplazamientos de empleados en una sola cuenta.</p>
+              <ul style="list-style:none;font-size:.9rem;display:flex;flex-direction:column;gap:.5rem;color:#444;">
+                <li>📊 Panel de control empresarial</li>
+                <li>💳 Facturación centralizada</li>
+                <li>👥 Gestión de múltiples empleados</li>
+                <li>📋 Políticas de viaje personalizadas</li>
+                <li>🔒 Privacidad reforzada</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- REPARTIDOR Uber Eats -->
+          <div style="border:1px solid #e5e5e5;border-radius:16px;overflow:hidden;">
+            <div style="background:#333;padding:2rem;text-align:center;">
+              <span style="font-size:3rem;">🛵</span>
+              <h3 style="color:#fff;font-weight:800;font-size:1.3rem;margin-top:.75rem;">Repartidor Uber Eats</h3>
+            </div>
+            <div style="padding:1.5rem;">
+              <p style="color:#555;font-size:.9rem;margin-bottom:1rem;">Repartidor independiente que entrega pedidos de restaurantes.</p>
+              <ul style="list-style:none;font-size:.9rem;display:flex;flex-direction:column;gap:.5rem;color:#444;">
+                <li>🚲 Bicicleta, moto o coche</li>
+                <li>📦 Múltiples pedidos simultáneos</li>
+                <li>💰 Ingresos por entrega + propinas</li>
+                <li>🕐 Flexibilidad horaria total</li>
+                <li>📱 App específica de repartidor</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <hr class="separator" />
+
+      <section class="section">
+        <h2 class="section-title">Distribución de usuarios</h2>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;">
+          <div style="padding:2rem;background:#f6f6f6;border-radius:12px;">
+            <p style="font-size:2.5rem;font-weight:900;">150M+</p>
+            <p style="color:#555;font-size:.9rem;margin-top:.5rem;">Usuarios activos mensuales</p>
+          </div>
+          <div style="padding:2rem;background:#f6f6f6;border-radius:12px;">
+            <p style="font-size:2.5rem;font-weight:900;">6M+</p>
+            <p style="color:#555;font-size:.9rem;margin-top:.5rem;">Conductores activos</p>
+          </div>
+          <div style="padding:2rem;background:#f6f6f6;border-radius:12px;">
+            <p style="font-size:2.5rem;font-weight:900;">26M+</p>
+            <p style="color:#555;font-size:.9rem;margin-top:.5rem;">Viajes diarios</p>
+          </div>
+          <div style="padding:2rem;background:#f6f6f6;border-radius:12px;">
+            <p style="font-size:2.5rem;font-weight:900;">70+</p>
+            <p style="color:#555;font-size:.9rem;margin-top:.5rem;">Países con Uber</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</Layout>

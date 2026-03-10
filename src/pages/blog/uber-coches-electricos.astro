@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+<Layout title="Uber apuesta por vehículos eléctricos" description="Uber se compromete a tener flota 100% eléctrica en Europa para 2030">
+
+  <article>
+    <div style="background:#000;color:#fff;padding:4rem 2rem;">
+      <div class="container" style="max-width:800px;">
+        <a href={`${base}blog`} style="color:#aaa;text-decoration:none;font-size:.85rem;">← Volver al blog</a>
+        <span class="card-tag" style="margin-top:1rem;display:inline-block;">Tecnología</span>
+        <h1 style="font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.1;margin-top:.75rem;letter-spacing:-1px;">
+          Uber apuesta por vehículos 100% eléctricos para 2030
+        </h1>
+        <p style="color:#aaa;margin-top:1rem;">5 de marzo de 2026 &middot; 4 min de lectura</p>
+      </div>
+    </div>
+
+    <div style="max-width:800px;margin:0 auto;padding:3rem 2rem;">
+      <img
+        src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1200&q=80"
+        alt="Vehículos eléctricos Uber"
+        style="width:100%;border-radius:14px;margin-bottom:2.5rem;box-shadow:0 4px 20px rgba(0,0,0,.1);"
+      />
+
+      <p style="font-size:1.15rem;color:#333;line-height:1.9;margin-bottom:1.5rem;">
+        Uber ha anunciado un ambicioso plan de sostenibilidad: <strong>toda su flota europea será 100%
+        eléctrica antes de 2030</strong>. La compañía destinará 800 millones de dólares en subsidios y
+        descuentos para ayudar a los conductores a cambiar sus vehículos de combustión por modelos
+        eléctricos.
+      </p>
+
+      <h2 style="font-size:1.5rem;font-weight:800;margin:2rem 0 1rem;">El plan Uber Green</h2>
+      <p style="color:#444;line-height:1.8;margin-bottom:1rem;">
+        El programa <em>Uber Green</em> ya está activo en varias ciudades españolas. Los usuarios pueden
+        seleccionar específicamente un vehículo eléctrico al pedir un viaje, con un sobrecargo mínimo
+        de 0,50 € que va directamente a un fondo para facilitar la transición eléctrica de conductores.
+      </p>
+
+      <h2 style="font-size:1.5rem;font-weight:800;margin:2rem 0 1rem;">Beneficios para conductores</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+        <div style="border:1px solid #e5e5e5;border-radius:10px;padding:1.25rem;">
+          <h4 style="font-weight:700;margin-bottom:.5rem;">Descuentos en compra</h4>
+          <p style="font-size:.9rem;color:#555;">Hasta 4.000 € de descuento al comprar un EV a través de los socios de Uber (Renault, Tesla, BYD).</p>
+        </div>
+        <div style="border:1px solid #e5e5e5;border-radius:10px;padding:1.25rem;">
+          <h4 style="font-weight:700;margin-bottom:.5rem;">Tarifas preferenciales</h4>
+          <p style="font-size:.9rem;color:#555;">Conductores con EV reciben un 3% menos de comisión en cada viaje completado.</p>
+        </div>
+        <div style="border:1px solid #e5e5e5;border-radius:10px;padding:1.25rem;">
+          <h4 style="font-weight:700;margin-bottom:.5rem;">Carga gratuita</h4>
+          <p style="font-size:.9rem;color:#555;">Acceso a red de cargadores preferentes en ciudades principales con 2 horas gratis diarias.</p>
+        </div>
+        <div style="border:1px solid #e5e5e5;border-radius:10px;padding:1.25rem;">
+          <h4 style="font-weight:700;margin-bottom:.5rem;">Seguro reducido</h4>
+          <p style="font-size:.9rem;color:#555;">Acuerdo con aseguradoras para coberturas específicas EV con hasta 20% de descuento.</p>
+        </div>
+      </div>
+
+      <h2 style="font-size:1.5rem;font-weight:800;margin:2rem 0 1rem;">Impacto medioambiental</h2>
+      <p style="color:#444;line-height:1.8;margin-bottom:1rem;">
+        Actualmente, los viajes de Uber en España generan aproximadamente 1,2 millones de toneladas de CO₂
+        al año. La transición completa a eléctricos reduciría estas emisiones en un <strong>80%</strong>,
+        equivalente a retirar 260.000 coches de la carretera.
+      </p>
+
+      <div style="background:#f0fdf4;border:2px solid #bbf7d0;border-radius:12px;padding:1.5rem 2rem;margin-top:2rem;">
+        <p style="font-weight:700;color:#166534;margin-bottom:.5rem;">Objetivo 2030</p>
+        <p style="color:#555;font-size:.9rem;">Uber se convierte en la primera gran plataforma de ride-sharing en comprometerse con cero emisiones en toda su operación europea.</p>
+      </div>
+
+      <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid #eee;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+        <a href={`${base}blog/uber-precio-dinamico-espana`} style="color:#000;text-decoration:none;font-weight:600;">← Artículo anterior</a>
+        <a href={`${base}blog/uber-ia-seguridad`} style="color:#000;text-decoration:none;font-weight:600;">Siguiente artículo →</a>
+      </div>
+    </div>
+  </article>
+</Layout>

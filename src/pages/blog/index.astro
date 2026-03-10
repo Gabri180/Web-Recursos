@@ -1,0 +1,116 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+
+const posts = [
+  {
+    slug: 'uber-lanza-uber-one',
+    title: 'Uber lanza Uber One en España',
+    excerpt: 'El nuevo programa de suscripción mensual ofrece descuentos exclusivos en viajes y Uber Eats para todos los usuarios.',
+    category: 'Novedades',
+    date: '10 marzo 2026',
+    img: 'https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=600&q=80',
+  },
+  {
+    slug: 'uber-precio-dinamico-espana',
+    title: 'Cómo funciona el precio dinámico de Uber en España',
+    excerpt: 'Analizamos el sistema de precios dinámicos: cuándo sube, cuánto sube y cómo evitar pagar de más.',
+    category: 'Novedades',
+    date: '8 marzo 2026',
+    img: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=600&q=80',
+  },
+  {
+    slug: 'uber-coches-electricos',
+    title: 'Uber apuesta por vehículos 100% eléctricos para 2030',
+    excerpt: 'La compañía anuncia que toda su flota europea será eléctrica antes de 2030, impulsando la movilidad sostenible.',
+    category: 'Tecnología',
+    date: '5 marzo 2026',
+    img: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&q=80',
+  },
+  {
+    slug: 'uber-ia-seguridad',
+    title: 'IA para mejorar la seguridad en los trayectos de Uber',
+    excerpt: 'Nuevos algoritmos de inteligencia artificial detectan comportamientos anómalos durante los viajes en tiempo real.',
+    category: 'Tecnología',
+    date: '1 marzo 2026',
+    img: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&q=80',
+  },
+];
+
+const categories = ['Todas', 'Novedades', 'Tecnología'];
+---
+<Layout title="Blog" description="Blog sobre Uber: noticias y tecnología">
+
+  <div style="background:#000;color:#fff;padding:4rem 2rem;text-align:center;">
+    <div class="container">
+      <h1 style="font-size:3rem;font-weight:900;letter-spacing:-2px;">Blog</h1>
+      <p style="color:#aaa;font-size:1.1rem;margin-top:.75rem;">Noticias y artículos sobre Uber</p>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+
+      <!-- CATEGORÍAS -->
+      <section style="padding:2rem 0 0;">
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+          {categories.map(cat => (
+            <button
+              class="cat-btn"
+              data-cat={cat}
+              style="padding:.5rem 1.25rem;border-radius:20px;border:2px solid #000;font-weight:600;font-size:.85rem;cursor:pointer;background:transparent;transition:all .2s;"
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <!-- POSTS -->
+      <section class="section" style="padding-top:2rem;">
+        <div class="grid-2" id="posts-grid">
+          {posts.map(post => (
+            <a href={`${base}blog/${post.slug}`} style="text-decoration:none;color:inherit;" data-category={post.category}>
+              <article class="card">
+                <img src={post.img} alt={post.title} />
+                <div class="card-body">
+                  <span class="card-tag">{post.category}</span>
+                  <h2 class="card-title" style="font-size:1.2rem;">{post.title}</h2>
+                  <p class="card-excerpt">{post.excerpt}</p>
+                  <p class="card-date">{post.date}</p>
+                </div>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .cat-btn.active, .cat-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+</style>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.cat-btn');
+  const articles = document.querySelectorAll<HTMLElement>('[data-category]');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.cat;
+      articles.forEach(art => {
+        art.style.display = (cat === 'Todas' || art.dataset.category === cat) ? 'block' : 'none';
+      });
+    });
+  });
+
+  // Activate first button
+  buttons[0]?.classList.add('active');
+</script>
