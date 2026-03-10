@@ -8,7 +8,9 @@
       "Bash(npm create astro@latest web-recursos -- --template minimal --no-install --no-git --typescript strict)",
       "Bash(npm install 2>&1)",
       "Bash(npm run build 2>&1)",
-      "Bash(git init && git add . && git commit -m \"$\\(cat <<'EOF'\nfeat: create Uber blog with Astro\n\nComplete blog about Uber with all required sections:\n- Home: header, gallery, video, slider, contact form, Google Maps\n- Menu pages: Características, Tarifas, Registro, Usuarios, Opinión\n- Blog: 2 categories \\(Novedades, Tecnología\\) with 2 articles each\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(git init && git add . && git commit -m \"$\\(cat <<'EOF'\nfeat: create Uber blog with Astro\n\nComplete blog about Uber with all required sections:\n- Home: header, gallery, video, slider, contact form, Google Maps\n- Menu pages: Características, Tarifas, Registro, Usuarios, Opinión\n- Blog: 2 categories \\(Novedades, Tecnología\\) with 2 articles each\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git rm -r --cached dist/ .astro/ node_modules/ 2>/dev/null; git add .gitignore && git commit -m \"chore: add .gitignore and remove build artifacts from tracking\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\")",
+      "Bash(gh auth status 2>&1)"
     ]
   }
 }
